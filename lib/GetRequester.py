@@ -13,5 +13,3 @@ class GetRequester:
 
     def load_json(self):
         return data
-
-c1 = GetRequester(url)
