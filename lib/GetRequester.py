@@ -1,16 +1,20 @@
 import requests
-import json
+
+url = "https://learn-co-curriculum.github.io/json-site-example/endpoints/people.json"
+response = requests.get(url)
+data = response.json()
 class GetRequester:
 
     def __init__(self, url):
+        global response, data
         self.url = url
+        self.data = data
+        self.response = response
 
     def get_response_body(self):
-        self.respose = requests.get(self.url)
-        return self.response
+        return response
 
     def load_json(self):
-        self.data = self.respose.json()
-        return self.data
+        return data
 
-url = GetRequester("https://learn-co-curriculum.github.io/json-site-example/endpoints/people.json")
+c1 = GetRequester(url)
