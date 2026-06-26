@@ -12,3 +12,6 @@ class GetRequester:
     def load_json(self):
         self.data = self.respose.json()
         return self.data
+    
+
+url = GetRequester("https://learn-co-curriculum.github.io/json-site-example/endpoints/people.json")
