@@ -6,10 +6,7 @@ data = response.json()
 class GetRequester:
 
     def __init__(self, url):
-        global response, data
         self.url = url
-        self.data = data
-        self.response = response
 
     def get_response_body(self):
         return response
